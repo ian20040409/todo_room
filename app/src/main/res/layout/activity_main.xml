@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/tv_text"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:background="#FFFFFF"
+
+    tools:context=".MainActivity"
+
+    tools:layout_editor_absoluteX="15dp"
+
+    tools:layout_editor_absoluteY="-9dp">
+
+
+
+    <TextView
+
+        android:id="@+id/textName"
+
+        android:layout_width="51dp"
+
+        android:layout_height="29dp"
+
+        android:layout_marginStart="28dp"
+
+        android:layout_marginTop="16dp"
+
+        android:text="姓名"
+
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <EditText
+
+        android:id="@+id/ed_name"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="92dp"
+
+        android:layout_marginTop="4dp"
+
+        android:ems="10"
+
+        android:hint="請輸入姓名"
+
+        android:inputType="text"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <RadioGroup
+
+        android:id="@+id/radioGender"
+
+        android:layout_width="393dp"
+
+        android:layout_height="56dp"
+
+        android:layout_marginTop="4dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="@+id/textName"
+
+        app:layout_constraintTop_toBottomOf="@+id/ed_name">
+
+
+
+        <TextView
+
+            android:id="@+id/text_gender"
+
+            android:layout_width="58dp"
+
+            android:layout_height="wrap_content"
+
+            android:text="性別"
+
+            android:textSize="20sp"
+
+            tools:layout_editor_absoluteX="23dp"
+
+            tools:layout_editor_absoluteY="141dp" />
+
+
+
+        <RadioButton
+
+            android:id="@+id/btn_m"
+
+            android:layout_width="59dp"
+
+            android:layout_height="wrap_content"
+
+            android:checked="true"
+
+            android:text="男"
+
+            tools:layout_editor_absoluteX="81dp"
+
+            tools:layout_editor_absoluteY="135dp" />
+
+
+
+        <RadioButton
+
+            android:id="@+id/btn_f"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="女"
+
+            tools:layout_editor_absoluteX="140dp"
+
+            tools:layout_editor_absoluteY="135dp" />
+
+
+
+    </RadioGroup>
+
+
+
+    <TextView
+
+        android:id="@+id/text_h"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="64dp"
+
+        android:text="身高cm"
+
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/radioGender" />
+
+
+
+    <TextView
+
+        android:id="@+id/text_w"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="28dp"
+
+        android:layout_marginTop="32dp"
+
+        android:text="體重kg"
+
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/text_h" />
+
+
+
+    <EditText
+
+        android:id="@+id/ed_h"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="120dp"
+
+        android:ems="10"
+
+        android:hint="請輸入身高"
+
+        android:inputType="text"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/radioGender" />
+
+
+
+    <EditText
+
+        android:id="@+id/ed_w"
+
+        android:layout_width="208dp"
+
+        android:layout_height="44dp"
+
+        android:layout_marginStart="120dp"
+
+        android:layout_marginTop="20dp"
+
+        android:ems="10"
+
+        android:hint="請輸入體重"
+
+        android:inputType="text"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/ed_h" />
+
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+
+        android:layout_width="380dp"
+
+        android:layout_height="78dp"
+
+        android:layout_marginTop="32dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/ed_w">
+
+
+        <Button
+
+            android:id="@+id/btn_insert"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="5sp"
+
+            android:text="新增" />
+
+
+        <Button
+
+            android:id="@+id/btn_update"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="5sp"
+
+            android:text="修改" />
+
+
+        <Button
+
+            android:id="@+id/btn_del"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="5sp"
+
+            android:text="刪除" />
+
+
+        <Button
+
+            android:id="@+id/btn_query"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="5sp"
+
+            android:text="查詢" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/bmi_list"
+        android:layout_width="385dp"
+        android:layout_height="376dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
