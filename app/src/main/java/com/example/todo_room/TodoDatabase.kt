@@ -1,24 +1,25 @@
-package com.example.bmi_room
+package com.example.todo
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [BMIEntity::class], version = 1)
-abstract class BMIDatabase : RoomDatabase() {
-    abstract fun bmiDao(): BMIDao
+@Database(entities = [TodoEntity::class], version = 1)
+abstract class TodoDatabase : RoomDatabase() {
+
+    abstract fun todoDao(): TodoDao
 
     companion object {
         @Volatile
-        private var INSTANCE: BMIDatabase? = null
+        private var INSTANCE: TodoDatabase? = null
 
-        fun getDatabase(context: Context): BMIDatabase {
+        fun getDatabase(context: Context): TodoDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    BMIDatabase::class.java,
-                    "bmi_database"
+                    TodoDatabase::class.java,
+                    "todo_database"
                 ).build()
                 INSTANCE = instance
                 instance
@@ -26,4 +27,3 @@ abstract class BMIDatabase : RoomDatabase() {
         }
     }
 }
-

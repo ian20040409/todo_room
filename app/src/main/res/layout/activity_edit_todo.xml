@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.todo_room.EditTodoActivity">
+
+    <!-- 已完成的 CheckBox -->
+
+    <!-- 待辦事項標題 -->
+
+    <CheckBox
+        android:id="@+id/checkbox_completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="已完成"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_select_date" />
+
+    <!-- 描述 -->
+
+    <!-- 類別選擇 -->
+
+    <!-- 日期選擇 -->
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="104dp"
+        android:text="事項標題"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_title"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="92dp"
+        android:hint="請輸入待辦事項標題"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/text_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="描述"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+    <EditText
+        android:id="@+id/ed_description"
+        android:layout_width="247dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:hint="請輸入描述"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:minLines="2"
+        app:layout_constraintStart_toEndOf="@+id/text_description"
+        app:layout_constraintTop_toBottomOf="@+id/ed_title" />
+
+    <!-- 時間選擇 -->
+
+    <TextView
+        android:id="@+id/text_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="類別"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_description" />
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="127dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/text_category"
+        app:layout_constraintTop_toBottomOf="@+id/ed_description" />
+
+    <Button
+        android:id="@+id/btn_select_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#22307E"
+        android:text="選擇日期"
+        app:icon="@drawable/calendar_month_24px"
+        app:layout_constraintStart_toStartOf="@+id/text_category"
+        app:layout_constraintTop_toBottomOf="@+id/text_category" />
+
+    <Button
+        android:id="@+id/btn_select_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#00685E"
+        android:text="選擇時間"
+        app:icon="@drawable/schedule_24px"
+        app:iconSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toEndOf="@+id/btn_select_date"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_category" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="142dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#009688"
+        android:text="保存"
+        app:icon="@drawable/save_24px"
+        app:iconSize="22dp"
+        app:iconTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="124dp"
+        android:backgroundTint="#A60606"
+        android:text="放棄並返回"
+        app:icon="@drawable/cancel_24px"
+        app:iconSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_save"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_manage_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#E91E1E"
+        android:text="刪除類別"
+        app:icon="@drawable/delete_24px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/spinner_category"
+        app:layout_constraintTop_toBottomOf="@+id/ed_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

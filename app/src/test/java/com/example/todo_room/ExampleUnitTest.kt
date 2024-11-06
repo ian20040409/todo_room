@@ -1,4 +1,4 @@
-package com.example.bmi_room
+package com.example.todo_room
 
 import org.junit.Test
 

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Bmi_room"
         tools:targetApi="31">
         <activity
+            android:name=".EditTodoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
     </application>
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 </manifest>

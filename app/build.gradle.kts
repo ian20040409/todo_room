@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.bmi_room"
+    namespace = "com.example.todo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.bmi_room"
+        applicationId = "com.example.todo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -19,6 +19,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures {
+        viewBinding=true
+    }
+
 
     buildTypes {
         release {
@@ -50,6 +55,11 @@ dependencies {
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation ("androidx.room:room-ktx:$room_version")
+
+    implementation("androidx.compose.material:material:1.7.5")
+    implementation ("androidx.work:work-runtime-ktx:2.8.1")
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

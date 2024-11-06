@@ -1,317 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
-
-    android:id="@+id/tv_text"
-
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-
     android:background="#FFFFFF"
+    tools:context=".MainActivity">
 
-    tools:context=".MainActivity"
+    <!-- 待辦事項標題 -->
 
-    tools:layout_editor_absoluteX="15dp"
+    <!-- 待辦事項描述 -->
 
-    tools:layout_editor_absoluteY="-9dp">
+    <!-- 操作按鈕 -->
 
-
-
-    <TextView
-
-        android:id="@+id/textName"
-
-        android:layout_width="51dp"
-
-        android:layout_height="29dp"
-
-        android:layout_marginStart="28dp"
-
-        android:layout_marginTop="16dp"
-
-        android:text="姓名"
-
-        android:textSize="20sp"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-    <EditText
-
-        android:id="@+id/ed_name"
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="92dp"
-
-        android:layout_marginTop="4dp"
-
-        android:ems="10"
-
-        android:hint="請輸入姓名"
-
-        android:inputType="text"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-    <RadioGroup
-
-        android:id="@+id/radioGender"
-
-        android:layout_width="393dp"
-
-        android:layout_height="56dp"
-
-        android:layout_marginTop="4dp"
-
-        android:orientation="horizontal"
-
-        app:layout_constraintStart_toStartOf="@+id/textName"
-
-        app:layout_constraintTop_toBottomOf="@+id/ed_name">
-
-
-
-        <TextView
-
-            android:id="@+id/text_gender"
-
-            android:layout_width="58dp"
-
-            android:layout_height="wrap_content"
-
-            android:text="性別"
-
-            android:textSize="20sp"
-
-            tools:layout_editor_absoluteX="23dp"
-
-            tools:layout_editor_absoluteY="141dp" />
-
-
-
-        <RadioButton
-
-            android:id="@+id/btn_m"
-
-            android:layout_width="59dp"
-
-            android:layout_height="wrap_content"
-
-            android:checked="true"
-
-            android:text="男"
-
-            tools:layout_editor_absoluteX="81dp"
-
-            tools:layout_editor_absoluteY="135dp" />
-
-
-
-        <RadioButton
-
-            android:id="@+id/btn_f"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:text="女"
-
-            tools:layout_editor_absoluteX="140dp"
-
-            tools:layout_editor_absoluteY="135dp" />
-
-
-
-    </RadioGroup>
-
-
-
-    <TextView
-
-        android:id="@+id/text_h"
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="20dp"
-
-        android:layout_marginTop="64dp"
-
-        android:text="身高cm"
-
-        android:textSize="20sp"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="@+id/radioGender" />
-
-
-
-    <TextView
-
-        android:id="@+id/text_w"
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="28dp"
-
-        android:layout_marginTop="32dp"
-
-        android:text="體重kg"
-
-        android:textSize="20sp"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/text_h" />
-
-
-
-    <EditText
-
-        android:id="@+id/ed_h"
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="120dp"
-
-        android:ems="10"
-
-        android:hint="請輸入身高"
-
-        android:inputType="text"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/radioGender" />
-
-
-
-    <EditText
-
-        android:id="@+id/ed_w"
-
-        android:layout_width="208dp"
-
-        android:layout_height="44dp"
-
-        android:layout_marginStart="120dp"
-
-        android:layout_marginTop="20dp"
-
-        android:ems="10"
-
-        android:hint="請輸入體重"
-
-        android:inputType="text"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/ed_h" />
-
+    <!-- 待辦事項列表 -->
 
     <LinearLayout
-
         android:id="@+id/linearLayout"
-
-        android:layout_width="380dp"
-
-        android:layout_height="78dp"
-
-        android:layout_marginTop="32dp"
-
+        android:layout_width="399dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:orientation="horizontal"
-
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/ed_w">
-
+        app:layout_constraintEnd_toEndOf="@+id/todo_list"
+        app:layout_constraintStart_toStartOf="@+id/todo_list"
+        app:layout_constraintTop_toBottomOf="@+id/btn_refresh">
 
         <Button
-
             android:id="@+id/btn_insert"
-
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
-
-            android:layout_marginLeft="5sp"
-
-            android:text="新增" />
-
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#3F51B5"
+            android:backgroundTintMode="add"
+            android:hapticFeedbackEnabled="true"
+            android:text="新增"
+            app:icon="@drawable/docs_add_on_24px"
+            app:iconSize="22dp" />
 
         <Button
-
-            android:id="@+id/btn_update"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="5sp"
-
-            android:text="修改" />
-
-
-        <Button
-
             android:id="@+id/btn_del"
-
             android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="5sp"
-
-            android:text="刪除" />
-
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#E91E1E"
+            android:hapticFeedbackEnabled="true"
+            android:text="刪除"
+            app:icon="@drawable/delete_24px"
+            app:iconSize="22dp" />
 
         <Button
-
             android:id="@+id/btn_query"
-
             android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="5sp"
-
-            android:text="查詢" />
-
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#009688"
+            android:hapticFeedbackEnabled="true"
+            android:text="查詢"
+            app:icon="@drawable/search_24px"
+            app:iconSize="22dp" />
     </LinearLayout>
 
     <ListView
-        android:id="@+id/bmi_list"
-        android:layout_width="385dp"
-        android:layout_height="376dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/todo_list"
+        android:layout_width="369dp"
+        android:layout_height="464dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4hint" />
 
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:text="重新整理"
+        app:icon="@drawable/refresh_24px"
+        app:iconSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4hint" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="無待辦事項"
+        android:visibility="gone"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/textView4hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="長按項目進行編輯"
+        android:textColor="#AE383838"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_view"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <TextView
+        android:id="@+id/textView5hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:text="點一下可更改完成狀態"
+        android:textColor="#AE383838"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4hint"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

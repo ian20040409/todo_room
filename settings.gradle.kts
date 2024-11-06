@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "bmi_room"
+rootProject.name = "todo"
 include(":app")
